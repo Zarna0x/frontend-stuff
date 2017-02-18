@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch</title>
+	<style type="text/css">
+         .switch {
+         	position: relative;
+         }
+
+         .switch input[type="checkbox"] {
+         	visibility: hidden;
+         }
+        
+
+        .switch input[type="checkbox"] + label {
+        	position: absolute;
+        	width: 55px;
+        	height: 24px;
+        	background-color: #ddd;
+        	border-radius: 50px;
+          margin-left: -10px;
+       }
+
+       .switch input[type="checkbox"] + label:after{
+         content: '';
+         position: absolute;
+         width: 21px;
+         height: 22px;
+         border-radius: 50%;
+         background-color: black;
+         left: 32px;
+         top: 1px;
+         -webkit-transition: all 0.2s;
+         transition: all 1s;
+       }
+
+       .switch input[type="checkbox"]:checked + label:after{
+          left: 1px;
+       }
+
+       .switch input[type="checkbox"]:checked + label{
+         background-color: green;
+       }
+
+	</style>
+</head>
+<body>
+
+
+   <div class="switch">
+   	   <input type="checkbox" id="checkbox1">
+   	   <label for="checkbox1"></label>
+   </div>
+</body>
+</html>
